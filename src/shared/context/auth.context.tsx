@@ -63,7 +63,6 @@ export function Provider({ children }: ProviderProps) {
     }, [rootNavigation]);
 
     useEffect(() => {
-      if (!isNavigationInitialized) return;
       const inAuthGroup = segments[0] === '(auth)';
       if (!authInitialized) return;
       
@@ -77,15 +76,12 @@ export function Provider({ children }: ProviderProps) {
       try {
         // function to get the already logged in user
         const user = await getStoredUser();
-        console.log('auth.context - ln80', user);
         setUser(user);
       } catch (error) {
-        console.log("error", error);
         setUser(null);
       }
 
       setAuthInitialized(true);
-      console.log('auth.context - ln88', "initialize ", user);
     })();
   }, []);
 

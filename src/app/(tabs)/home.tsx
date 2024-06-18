@@ -9,7 +9,7 @@ export default function HomeScreen() {
     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
       <Text>Home 1</Text>
       <Button title='Logout' onPress={ signOut } />
-      <Button title='Secondary Screen' onPress={ () => router.push('/screens') } />
+      <Button title='Secondary Screen' onPress={ () => router.push('/secondary-screen') } />
     </View>
   )
 }

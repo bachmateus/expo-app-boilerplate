@@ -1,8 +1,6 @@
 /src
-  /app
-    /components      // Componentes UI sem lógica de negócio
-    /screens         // Telas ou containers que conectam componentes à lógica de negócio
-    /navigation      // Configuração de navegação
+  /app               // Telas ou containers que conectam componentes à lógica de negócio
+  /components        // Componentes UI sem lógica de negócio
   /domain
     /entities        // Definições de entidades (modelos de negócio)
     /repositories    // Interfaces para repositórios (padrão de repositório)
